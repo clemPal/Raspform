@@ -107,7 +107,7 @@ sessionSockets.on('connection', function (err, socket, session) {
 	socket.on('disconnect', function() {
 		/* To save the disconnection msg in the cookie session of every users*/
 		msgDisconection = '>> ' + session.username + ' is disconnected <<';
-     	console.log(msgDisconection);
+		console.log(msgDisconection);
  		socketFunc.sess_saving(io, socket, sessionSockets, msgDisconection, session);
 
 		/* To transmit the disconnection msg */
