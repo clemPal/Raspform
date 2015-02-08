@@ -5,7 +5,7 @@ var session = require('express-session'); //to load the session middleware
 var SessionSockets = require('session.socket.io'); //to load the socket session middleware
 var cookieParser = require('cookie-parser')('ouistiti'); //to load the socket parameter interpreter middleware
 var sessionstore = require('sessionstore');//to load the session store middleware.
-var ent = require('ent');
+var ent = require('ent'); //to block the parsing of js through the socket user text input.
 var Gpio = require('onoff').Gpio; //to allow the GPIO use
 
 var routes = require('./lib/router');
