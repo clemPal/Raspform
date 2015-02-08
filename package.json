@@ -1,6 +1,6 @@
 {
 	"name" : "Raspform",
-	"version" : "1.0.0",
+	"version" : "1.1.0",
 	"dependencies" : {
 		"express" : "~4.11.1",
 		"ejs" : "~2.2.3",
@@ -10,6 +10,7 @@
 		"session.socket.io" : "~0.1.6",
 		"express-session" : "~1.10.2",
 		"sessionstore" : "~1.0.5",
-		"ent" : "~2.2.0"
+		"ent" : "~2.2.0",
+		"onoff" : "~1.0.0"
 	}
 }
