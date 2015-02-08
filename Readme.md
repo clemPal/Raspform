@@ -12,7 +12,7 @@ And it can be installed on every UNIX system.
 ## Installation
 
 ```bash
-$ git clone ...
+$ git clone https://github.com/clemPal/Raspform
 $ cd Raspform
 $ npm install
 ```
@@ -29,4 +29,4 @@ To run the service, open your web browser and go on the web page :
 http://<server_IP>:8080
 (the server listen the port 8080)
 
-If you don't know the IP address of your server on your local network, I suggest you to use the 'nmap' program to find it.
+If you don't know the IP address of your server on your local network, I suggest you to use 'nmap' to find it.
