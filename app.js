@@ -6,9 +6,11 @@ var SessionSockets = require('session.socket.io'); //to load the socket session 
 var cookieParser = require('cookie-parser')('ouistiti'); //to load the socket parameter interpreter middleware
 var sessionstore = require('sessionstore');//to load the session store middleware.
 var ent = require('ent');
+var Gpio = require('onoff').Gpio; //to allow the GPIO use
 
 var routes = require('./lib/router');
 var socketFunc = require('./lib/socketFunc');
+var raspberryFunc = require('./lib/raspberry');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var sessionStore = sessionstore.createSessionStore(); //to create a session store
@@ -81,6 +83,9 @@ app.use(express.static(__dirname + '/public')) // to define the public directory
 
 /* The socket connection with associated functions */
 sessionSockets.on('connection', function (err, socket, session) {
+
+	/* the LED on the 17th input of the GPIO blinks at 5 Hz and turns off after 2 seconds at connexion*/
+	raspberryFunc.blinkDuring(Gpio, 17, 5, 2000);
 
 	/* To save the connexion msg in the cookie session of every users*/
 	NewCoMsg = '>> ' + session.username + ' is connected <<';
