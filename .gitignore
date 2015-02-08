@@ -1,0 +1,8 @@
+# Unecessary textfiles
+*.txt
+
+# Mac Files
+.DS_Store
+
+# Distribution / packaging
+/node_modules

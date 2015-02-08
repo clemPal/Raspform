@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- head of the page -->
+ 
+        <meta charset="utf-8" />   
+        <link rel="stylesheet" href="css/style.css" />     
+        <title>TODO-List</title>
+
+    </head>
+
+    <body>
+        <!-- body of the page -->
+ 
+        <h1>My Great TODO list</h1>
+
+        <!-- item list emplacement -->
+        <div>
+            <% for (var i in itemList) { %>
+
+                </br><img src="img/dot.jpg" alt="Dot_pict" width='10px' height='10px'>
+
+                <%= itemList[i] %>
+
+                <a href="/todo/del/<%= i %>" ><img src="img/cross.jpeg" alt="Cross_pict" width='10px' height='10px'></a>
+
+
+            <% } %>           
+        </div>
+
+        <!-- form to get the new item -->
+        <form action="/todo/add" method="post"> 
+            <input id="itemTxt" type="text" name="newItem" value="New Item"/>
+            <input type="submit" value="Submit !" />
+        </form>
+        </br>
+        </br>
+        <p><a href="/">home</a> OR <a href="/logout">logout</a></p>
+
+        <script src="js/todo.js" type="text/javascript"></script>
+    </body>

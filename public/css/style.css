@@ -1,0 +1,34 @@
+p
+{
+    font-size: medium;
+}
+h1
+{
+    font-size: xx-large;
+}
+h3
+{
+    font-size: large;
+}
+
+strong
+{
+	font-size: medium;
+	font-weight: bold;
+    color: blue;
+}
+
+em
+{
+	font-size: medium;
+	font-style: italic;
+	font-weight: bold;
+    color: maroon;
+}
+
+#previous
+{
+	font-size: medium;
+	font-style: italic;
+	color: green;
+}
