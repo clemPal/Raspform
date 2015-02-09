@@ -14,6 +14,7 @@ At this state of the development, the soft provide :
 - A blincking led at disconnection if it is pluged on GPIO18
 
 ## Components needed
+
 1 – Breadboard
 2 – 68 Ohms resistor
 2 – LED
