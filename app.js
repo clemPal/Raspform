@@ -99,7 +99,7 @@ sessionSockets.on('connection', function (err, socket, session) {
 	socket.on('message', function(message) {
 
 		/* To save the msg in the cookie session of every users*/
-		msgGot = '> ' + session.username +': ' + ent.encode(message);
+		msgGot = '> ' + session.username +': ' + message;
 		console.log(msgGot);
 		socketFunc.sess_saving(io, socket, sessionSockets, msgGot, session);
 
