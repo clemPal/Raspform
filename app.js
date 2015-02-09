@@ -132,3 +132,17 @@ app.use(function(req, res) {
 });
 
 server.listen('8080');
+
+//In case of innterruptions
+process.on('exit', function(code) {
+	//release the led pins in activity
+	raspberryFunc.stopGPIO();
+ 	console.log('About to exit with code:', code);
+});
+
+//When there is a Ctr-c
+process.on('SIGINT', function() {
+	//release the led pins in activity
+	console.log('Ok, goodbye');
+	process.exit();
+});
