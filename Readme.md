@@ -30,12 +30,12 @@ $ npm install
 
 ## Configuration
 
-It is necessary to spécify the IP adress of your server in the client views.
-'''bash
+It is necessary to specify the IP adress of your server in the client views.
+```bash
 $ nano views/chat.html
 then replace the line 40 with "var socket = io.connect('http://yourServerIP:8080');"
 then save and close the file
-'''
+```
 
 ## Electrical installation
 
