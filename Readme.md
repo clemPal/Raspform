@@ -15,10 +15,10 @@ At this state of the development, the soft provide :
 
 ## Components needed
 
-1 – Breadboard
-2 – 68 Ohms resistor
-2 – LED
-X - wires (depending of your wires)
+- 1 – Breadboard
+- 2 – 68 Ohms resistor
+- 2 – LED
+- X - wires (depending of your wires)
 
 ## Installation
 
