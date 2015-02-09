@@ -117,7 +117,10 @@ sessionSockets.on('connection', function (err, socket, session) {
 
 		/* To transmit the disconnection msg */
 		msgDisconection_formatted = '<em>' + msgDisconection + '</em>';
-		socket.broadcast.emit('message', msgDisconection_formatted);    	
+		socket.broadcast.emit('message', msgDisconection_formatted);   
+
+		/* the LED on the 17th input of the GPIO blinks at 5 Hz and turns off after 2 seconds at connexion*/
+		raspberryFunc.blinkDuring(Gpio, 18, 5, 2000); 	
     });
 });
 
